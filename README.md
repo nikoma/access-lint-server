@@ -69,4 +69,4 @@ web page and return the results in JSON format.
 
 Example:
 
-https://access-lint-server-demo.herokuapp.com/check?url=http://validationhell.com
+http://access-lint-server-demo.herokuapp.com/check?url=http://validationhell.com
