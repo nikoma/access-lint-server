@@ -2,9 +2,38 @@
 
 A lightweight AccessLint Server.
 
+[AccessLint](https://github.com/accesslint/access_lint) is a great Ruby gem that
+lets you check for accessibility issues on web pages.
+
+This gem encapsulates Google Chrome's [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools), which are
+executed via [PhantomJS](http://phantomjs.org/).
+
+As including these dependencies on an existing project might be a too heavy load,
+following the microservices approach it's better to move this part to an independent
+server.
+
+AccessLint Server is just that, a lightweight Sinatra app that gives you the results
+of the accessibility audits.
+
+## Setup
+
+To set up this on your development machine you'll need to install [PhantomJS](http://phantomjs.org/download.html) and then:
+
+```bash
+$ git clone https://github.com/sitevalidator/access-lint-server
+$ cd access-lint-server
+$ bundle install
+```
+
+After that, you can launch the server with:
+
+```bash
+$ bundle exec rackup
+```
+
 ## Deployment to Heroku
 
-Instructions based on [this post](https://gist.github.com/edelpero/9257311),
+Instructions are based on [this post](https://gist.github.com/edelpero/9257311).
 
 Create a new server and configure it to use the multi-buildpack:
 
