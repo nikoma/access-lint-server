@@ -15,6 +15,8 @@ server.
 AccessLint Server is just that, a lightweight Sinatra app that gives you the results
 of the accessibility audits.
 
+AccessLint Server is best used with the [Accessibility](https://github.com/sitevalidator/accessibility) Ruby client.
+
 ## Setup
 
 To set up this on your development machine you'll need to install [PhantomJS](http://phantomjs.org/download.html) and then:
