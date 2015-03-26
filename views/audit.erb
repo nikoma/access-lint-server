@@ -1,0 +1,58 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Accessibility audit results</h1>
+    <p>Page checked: <%= h @url %></p>
+    <p>Check out the <a href="https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules">Audit Rules</a> explanation.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" id="results" data-url="<%= h @url %>">
+      <p><i class="fa fa-cog fa-spin"></i> Fetching results, please wait...</p>
+
+      <script id="results-template" type="text/x-handlebars-template">
+        {{#if FAIL.length}}
+        <div class="results-group failed">
+          <h2><i class="fa fa-frown-o"></i> Failed:</h2>
+
+          <ul>
+            {{#FAIL}}
+              <li>
+                <h3>{{title}}.</h3>
+                <ul>
+                {{#each element_names}}
+                  <li><pre><code class="html">{{ this }}</code></pre></li>
+                {{/each}}
+                </ul>
+              </li>
+            {{/FAIL}}
+          </ul>
+        </div>
+        {{/if}}
+
+        {{#if PASS.length}}
+        <div class="results-group passed">
+          <h2><i class="fa fa-smile-o"></i> Passed:</h2>
+          <ul>
+          {{#PASS}}
+            <li><h3>{{title}}.</h3></li>
+          {{/PASS}}
+          </ul>
+        </div>
+        {{/if}}
+
+        {{#if NA.length}}
+        <div class="results-group not-applicable">
+          <h2><i class="fa fa-cog"></i> Not applicable:</h2>
+          <ul>
+          {{#NA}}
+            <li><h3>{{title}}.</h3></li>
+          {{/NA}}
+          </ul>
+        </div>
+        {{/if}}
+      </script>
+    </div>
+  </div>
+</div>

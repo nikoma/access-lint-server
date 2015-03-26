@@ -27,11 +27,13 @@ $ cd access-lint-server
 $ bundle install
 ```
 
-After that, you can launch the server with:
+After that, you can launch the server in development with:
 
 ```bash
-$ bundle exec rackup
+$ bundle exec rerun 'ruby app.rb'
 ```
+
+Your server is now ready at http://localhost:4567
 
 ## Deployment to Heroku
 

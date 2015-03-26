@@ -1,0 +1,46 @@
+p {
+  font-size: 1.2em;
+}
+
+div.results-group {
+  margin-bottom: 4em;
+}
+
+pre code {
+  font-size: 1.2em;
+}
+
+div.failed h2 {
+  color: red;
+}
+
+div.passed h2 {
+  color: green;
+}
+
+div.not-applicable h2 {
+  color: brown;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding: 15px;
+}
