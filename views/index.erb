@@ -1,0 +1,60 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Check your accessibility </h1>
+    <form action="/audit" method="get">
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input type="url" required="true" class="form-control" name="url" placeholder="http://example.com">
+      </div>
+      <button type="submit" class="btn btn-default">Run audit</button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>What's this?</h2>
+      <p>AccessLint Server is a proof of concept, a lightweight version of the awesome <a href="http://accesslint.com">AccessLint</a> project.</p>
+      <p>Our main goal is provide a way to easily host your own Accessibility audit servers, that return the results in JSON format.</p>
+      <p><a class="btn btn-default" href="http://accesslint.com" role="button">Check out AccessLint.com &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>How can I use it?</h2>
+      <p>You can run an audit on your sites using the form above.</p>
+      <p>After that, if you're going to use this in production, you're encouraged to <a href="https://github.com/sitevalidator/access-lint-server">set up your own accessibility server</a>.</p>
+      <p><a class="btn btn-default" href="https://github.com/sitevalidator/access-lint-server" role="button">Set up your own accessibility server &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Where's the JSON API?</h2>
+      <p>Audit results are returned as JSON on URLS like <code>/check?url=http://example.com</code>.</p>
+      <p>You'll find a link to the JSON from the audit results page.</p>
+      <p><a class="btn btn-default" href="/check?url=http%3A%2F%2Fwww.w3.org%2FWAI%2Fdemos%2Fbad%2Fbefore%2Fhome.html" role="button">Example JSON results &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Ruby client</h2>
+      <p>If you're a Ruby developer, check out our <a href="https://github.com/sitevalidator/accessibility">Accessibility</a>.</p>
+      <p>It's the perfect companion for the JSON API produced by this server and adds a friendlier API on top of it.</p>
+      <p><a class="btn btn-default" href="https://github.com/sitevalidator/accessibility" role="button">Get the Accessibility gem &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Contribute!</h2>
+      <p>Accessibility validation is a very resource intensive process. Each page check can take seconds, maybe tens of seconds, to finish.</p>
+      <p>That's why we're encouraging developers to host their own servers (it's easy and free to do in Heroku).</p>
+      <p>If you're willing to share your accessibility server with the rest of the community, you can <a href="https://github.com/sitevalidator/access-lint-server/wiki/Public-Accessibility-Servers">add it to the wiki.</a></p>
+      <p><a class="btn btn-default" href="https://github.com/sitevalidator/access-lint-server/wiki/Public-Accessibility-Servers" role="button">List of public accessibility servers &raquo;</a></p>
+    </div>
+  </div>
+</div>

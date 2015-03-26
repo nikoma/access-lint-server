@@ -8,6 +8,11 @@ before do
   @url = params[:url]
 end
 
+# Home page
+get '/' do
+  erb :index
+end
+
 # Audit results
 get '/audit' do
   erb :audit
@@ -24,5 +29,13 @@ end
 helpers do
   def h(text)
     Rack::Utils.escape_html(text)
+  end
+
+  def title
+    if @url
+      "Accessibility audit for #{h @url} %>"
+    else
+      "AccessLint Server :: Check your accessibility"
+    end
   end
 end
