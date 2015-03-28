@@ -37,6 +37,8 @@ Your server is now ready at http://localhost:4567
 
 ## Deployment to Heroku
 
+AccessLint Server is easily deployed to Heroku for testing purposes and works on a free 1X dyno instance, although for production you will need at least 2 Gb of RAM on your server.
+
 Instructions are based on [this post](https://gist.github.com/edelpero/9257311).
 
 Create a new server and configure it to use the multi-buildpack:
