@@ -1,0 +1,6 @@
+production:
+  first_thing: # Hook point
+    - snippet: cloud66/phantomjs # Hook type
+      target: any # Hook fields
+      sudo: true # Needed to install a package
+      execute: true # Must be set to true for all snippets
